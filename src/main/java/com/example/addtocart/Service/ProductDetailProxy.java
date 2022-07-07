@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.addtocart.Entity.Product;
 
-@FeignClient(name="product-details" ,url="https://amazon-clone-product-mservice.herokuapp.com")
+@FeignClient(name="product-details" ,url="amazon-clone-product-mservice.herokuapp.com")
 public interface ProductDetailProxy {
     @GetMapping("/amazon/products/getById/{productID}")
     public Product getById(@PathVariable UUID productID);
